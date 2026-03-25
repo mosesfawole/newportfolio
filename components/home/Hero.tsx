@@ -30,19 +30,6 @@ export default function Hero() {
   return (
     <section className="min-h-screen flex flex-col justify-center px-6 md:px-12 pt-16">
       <div className="max-w-6xl mx-auto w-full">
-        {/* Availability pill */}
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="inline-flex items-center gap-2 mb-10 px-3 py-1.5 rounded-full border border-border dark:border-border-dark"
-        >
-          <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-          <span className="text-xs text-muted font-body tracking-wide">
-            Available for work
-          </span>
-        </motion.div>
-
         {/* Main headline */}
         <div className="mb-8 overflow-hidden">
           <motion.h1
@@ -51,7 +38,8 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
             className="font-display font-medium leading-none text-ink dark:text-cream text-[clamp(52px,9vw,120px)] tracking-[-0.02em]"
           >
-            Moses
+            I build things
+            <br />
           </motion.h1>
         </div>
 
@@ -66,7 +54,7 @@ export default function Hero() {
             }}
             className="font-display italic font-medium leading-none text-ink dark:text-cream text-[clamp(52px,9vw,120px)] tracking-[-0.02em]"
           >
-            Fawole
+            people <em>actually</em> use.
           </motion.h1>
         </div>
 
@@ -77,13 +65,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="mb-10"
         >
-          <p
-            className="font-body font-light text-muted tracking-widest uppercase"
-            style={{
-              fontSize: "clamp(11px, 1.5vw, 13px)",
-              letterSpacing: "0.25em",
-            }}
-          >
+          <p className="font-body font-light text-muted tracking-[0.25em] uppercase text-[clamp(11px,1.5vw,13px)]">
             {scrambled}
           </p>
         </motion.div>
@@ -115,6 +97,34 @@ export default function Hero() {
               Get in Touch
             </Link>
           </div>
+        </motion.div>
+        {/* Buttons */}
+        <div className="flex gap-4">
+          <a
+            href="/work"
+            className="px-6 py-2.5 bg-cream dark:bg-ink text-ink dark:text-cream text-xs tracking-widest uppercase font-body"
+          >
+            View Work
+          </a>
+          <a
+            href="/contact"
+            className="px-6 py-2.5 border border-border dark:border-border-dark text-xs tracking-widest uppercase font-body text-ink dark:text-cream"
+          >
+            Download CV
+          </a>
+        </div>
+
+        {/* Availability pill */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="inline-flex items-center gap-2 mb-10 px-3 py-1.5 rounded-full border border-border dark:border-border-dark"
+        >
+          <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+          <span className="text-xs text-muted font-body tracking-wide">
+            Available for work
+          </span>
         </motion.div>
 
         {/* Scroll hint */}

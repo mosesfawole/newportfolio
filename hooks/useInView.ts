@@ -10,7 +10,8 @@ export function useInView(threshold = 0.15) {
     if (!el) return;
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) setInView(true);
+        // Remove once: true — fires every time element enters/leaves view
+        setInView(entry.isIntersecting);
       },
       { threshold },
     );

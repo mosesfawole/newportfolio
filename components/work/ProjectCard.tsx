@@ -45,13 +45,7 @@ export default function ProjectCard({ project }: Props) {
           </div>
         </div>
 
-        <h3
-          className="font-display font-medium text-ink dark:text-cream mb-4 leading-tight"
-          style={{
-            fontSize: "clamp(28px, 3vw, 40px)",
-            letterSpacing: "-0.01em",
-          }}
-        >
+        <h3 className="font-display font-medium text-ink dark:text-cream mb-4 leading-tight text-[clamp(28px,3vw,40px)] tracking-[-0.01em]">
           {project.title}
         </h3>
 
