@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useInView } from "@/hooks/useInView";
-import { projects } from "@/data/projects";
+import { projects } from "@/data/Projects";
 
 export default function ProjectsPreview() {
   const { ref, inView } = useInView();
@@ -43,17 +43,11 @@ export default function ProjectsPreview() {
                 className="group flex flex-col md:flex-row md:items-center justify-between gap-4 py-8 hover:opacity-60 transition-opacity"
               >
                 <div className="flex items-start gap-6">
-                  <span
-                    className="text-xs text-muted font-body mt-1 shrink-0"
-                    style={{ minWidth: "32px" }}
-                  >
+                  <span className="text-xs text-muted font-body mt-1 shrink-0 min-w-[32px]">
                     0{i + 1}
                   </span>
                   <div>
-                    <h3
-                      className="font-display font-medium text-ink dark:text-cream mb-2"
-                      style={{ fontSize: "clamp(22px, 3vw, 32px)" }}
-                    >
+                    <h3 className="font-display font-medium text-ink dark:text-cream mb-2 text-[clamp(22px,3vw,32px)] tracking-[-0.01em]">
                       {project.title}
                     </h3>
                     <p className="text-sm text-muted font-body font-light max-w-md leading-relaxed">

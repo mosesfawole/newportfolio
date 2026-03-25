@@ -20,13 +20,7 @@ export default function AboutStrip() {
           <p className="text-xs tracking-[0.3em] uppercase text-muted font-body mb-6">
             About
           </p>
-          <h2
-            className="font-display font-medium text-ink dark:text-cream leading-tight mb-6"
-            style={{
-              fontSize: "clamp(32px, 5vw, 56px)",
-              letterSpacing: "-0.02em",
-            }}
-          >
+          <h2 className="font-display font-medium text-ink dark:text-cream leading-tight mb-6 text-[clamp(32px,5vw,56px)] tracking-[-0.02em]">
             Frontend engineer,
             <br />
             <em>detail obsessed.</em>

@@ -5,18 +5,16 @@ import Link from "next/link";
 
 interface Props {
   project: Project;
-  index: number;
 }
 
-export default function ProjectCard({ project, index }: Props) {
+export default function ProjectCard({ project }: Props) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className="group shrink-0 w-[80vw] md:w-[45vw] lg:w-[36vw] border border-border dark:border-border-dark p-8 flex flex-col justify-between"
-      style={{ minHeight: "420px" }}
+      className="group shrink-0 w-[80vw] md:w-[45vw] lg:w-[36vw] border border-border dark:border-border-dark p-8 flex flex-col justify-between min-h-[420px]"
     >
       <div>
         <div className="flex items-start justify-between mb-6">

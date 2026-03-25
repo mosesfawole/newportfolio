@@ -49,11 +49,7 @@ export default function Hero() {
             initial={{ y: 80, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-            className="font-display font-medium leading-none text-ink dark:text-cream"
-            style={{
-              fontSize: "clamp(52px, 9vw, 120px)",
-              letterSpacing: "-0.02em",
-            }}
+            className="font-display font-medium leading-none text-ink dark:text-cream text-[clamp(52px,9vw,120px)] tracking-[-0.02em]"
           >
             Moses
           </motion.h1>
@@ -68,11 +64,7 @@ export default function Hero() {
               ease: [0.22, 1, 0.36, 1],
               delay: 0.35,
             }}
-            className="font-display italic font-medium leading-none text-ink dark:text-cream"
-            style={{
-              fontSize: "clamp(52px, 9vw, 120px)",
-              letterSpacing: "-0.02em",
-            }}
+            className="font-display italic font-medium leading-none text-ink dark:text-cream text-[clamp(52px,9vw,120px)] tracking-[-0.02em]"
           >
             Fawole
           </motion.h1>
@@ -103,10 +95,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.75 }}
           className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8"
         >
-          <p
-            className="font-body font-light text-muted leading-relaxed max-w-md"
-            style={{ fontSize: "clamp(14px, 1.5vw, 16px)" }}
-          >
+          <p className="font-body font-light text-muted leading-relaxed max-w-md text-[clamp(14px,1.5vw,16px)]">
             I build things people actually use — fast, beautiful and functional.
             Based in Lagos, working worldwide.
           </p>
