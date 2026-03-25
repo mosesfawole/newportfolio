@@ -2,16 +2,17 @@ import type { Project } from "@/types";
 
 export const projects: Project[] = [
   {
-    id: "cryptoview",
-    title: "CryptoView",
+    id: "baroque",
+    title: "Baroque Works",
     description:
-      "Real-time cryptocurrency dashboard with live WebSocket price feeds, an interactive 3D globe showing global exchange activity, and a persistent watchlist.",
+      "Cinematic One Piece fan site with interactive 3D character models, Apple-style scroll storytelling and Framer Motion page transitions.",
     year: "2025",
     type: "Personal Project",
-    stack: ["Next.js", "Three.js", "Zustand", "Binance API"],
-    github: "https://github.com/mosesfawole/crypto-dashboard",
+    live: "https://baroque-theta.vercel.app/",
+    stack: ["Next.js", "React Three Fiber", "Framer Motion"],
     featured: true,
   },
+
   {
     id: "hireboard",
     title: "HireBoard",
@@ -19,7 +20,8 @@ export const projects: Project[] = [
       "Full-stack job board with role-based auth, company dashboards, admin approval workflow and server-side rendered job listings.",
     year: "2025",
     type: "Personal Project",
-    stack: ["Next.js", "Supabase", "NextAuth", "TypeScript"],
+    stack: ["Next.js", "Supabase", "NextAuth", "Zustand", "TypeScript"],
+    live: "https://hireboard-steel.vercel.app/",
     github: "https://github.com/mosesfawole/hireboard",
     featured: true,
   },
@@ -35,17 +37,6 @@ export const projects: Project[] = [
     featured: false,
   },
   {
-    id: "mousa",
-    title: "Mousa",
-    description:
-      "AI-powered Twitter content dashboard — generate post ideas, expand them into full tweets, and analyze performance with Claude AI.",
-    year: "2025",
-    type: "Personal Project",
-    stack: ["Next.js", "Claude API", "Supabase"],
-    github: "https://github.com/mosesfawole/mousa",
-    featured: false,
-  },
-  {
     id: "kipclean",
     title: "KipClean",
     description:
@@ -58,13 +49,26 @@ export const projects: Project[] = [
     featured: false,
   },
   {
-    id: "baroque",
-    title: "Baroque Works",
+    id: "cryptoview",
+    title: "CryptoView",
     description:
-      "Cinematic One Piece fan site with interactive 3D character models, Apple-style scroll storytelling and Framer Motion page transitions.",
+      "Real-time cryptocurrency dashboard with live WebSocket price feeds, an interactive 3D globe showing global exchange activity, and a persistent watchlist.",
     year: "2025",
     type: "Personal Project",
-    stack: ["Next.js", "React Three Fiber", "Framer Motion"],
+    stack: ["Next.js", "Three.js", "Zustand", "Binance API"],
+    live: "https://crypto-dashboard-ten-beta.vercel.app/dashboard",
+    github: "https://github.com/mosesfawole/crypto-dashboard",
+    featured: false,
+  },
+  {
+    id: "mousa",
+    title: "Mousa",
+    description:
+      "AI-powered Twitter content dashboard — generate post ideas, expand them into full tweets, and analyze performance with Claude AI.",
+    year: "2025",
+    type: "Personal Project",
+    stack: ["Next.js", "Claude API", "Supabase"],
+    github: "https://github.com/mosesfawole/mousa",
     featured: false,
   },
 ];
