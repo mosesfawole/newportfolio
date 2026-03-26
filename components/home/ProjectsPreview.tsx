@@ -9,7 +9,7 @@ export default function ProjectsPreview() {
   const featured = projects.filter((p) => p.featured);
 
   return (
-    <section ref={ref} className="py-16 md:py-32 px-6 md:px-12">
+    <section ref={ref} className="py-12 md:py-24 px-6 md:px-12">
       <div className="max-w-6xl mx-auto">
         {/* Label */}
         <motion.div

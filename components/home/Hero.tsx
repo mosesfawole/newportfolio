@@ -119,10 +119,10 @@ export default function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="inline-flex items-center gap-2 mb-10 px-3 py-1.5 rounded-full border border-border dark:border-border-dark"
+          className="inline-flex items-center gap-2 mt-4  px-3 py-1.5 rounded-full border border-border dark:border-border-dark"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-          <span className="text-xs text-muted font-body tracking-wide">
+          <span className="text-xs  text-muted font-body tracking-wide">
             Available for work
           </span>
         </motion.div>
