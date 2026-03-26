@@ -32,9 +32,11 @@ body {
   color: #fafaf8;
 }
 
-/* hide default cursor everywhere */
-* {
-  cursor: none !important;
+/* hide default cursor for precise pointers only (desktop); keep natural for touch devices */
+@media (pointer: fine) and (hover: hover) {
+  * {
+    cursor: none !important;
+  }
 }
 
 .horizontal-scroll-height {
