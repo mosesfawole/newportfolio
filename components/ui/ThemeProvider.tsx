@@ -6,22 +6,30 @@ const ThemeContext = createContext({
   toggle: () => {},
 });
 
-const getInitialTheme = () => {
-  if (typeof window === "undefined") {
-    return false;
-  }
+// const getInitialTheme = () => {
+//   if (typeof window === "undefined") {
+//     return false;
+//   }
 
-  const saved = localStorage.getItem("theme");
-  return saved === "dark";
-};
+//   const saved = localStorage.getItem("theme");
+//   return saved === "dark";
+// };
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [dark, setDark] = useState(getInitialTheme);
+  const [dark, setDark] = useState(true); //
 
   useEffect(() => {
-    document.documentElement.classList.toggle("dark", dark);
-    localStorage.setItem("theme", dark ? "dark" : "light");
-  }, [dark]);
+    const saved = localStorage.getItem("theme");
+    if (saved === "light") {
+      setDark(false);
+      document.documentElement.classList.remove("dark");
+    } else {
+      // No saved preference OR saved as dark → always dark
+      setDark(true);
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    }
+  }, []);
 
   const toggle = () => {
     setDark((prev) => !prev);
