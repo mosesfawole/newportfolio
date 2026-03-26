@@ -99,7 +99,7 @@ export default function Hero() {
           </div>
         </motion.div>
         {/* Buttons */}
-        <div className="flex gap-4">
+        {/* <div className="flex gap-4">
           <a
             href="/work"
             className="px-6 py-2.5 bg-cream dark:bg-ink text-ink dark:text-cream text-xs tracking-widest uppercase font-body"
@@ -112,7 +112,7 @@ export default function Hero() {
           >
             Download CV
           </a>
-        </div>
+        </div> */}
 
         {/* Availability pill */}
         <motion.div

@@ -6,7 +6,7 @@ export const projects: Project[] = [
     title: "Baroque Works",
     description:
       "Cinematic One Piece fan site with interactive 3D character models, Apple-style scroll storytelling and Framer Motion page transitions.",
-    year: "2025",
+    year: "2026",
     type: "Personal Project",
     live: "https://baroque-theta.vercel.app/",
     github: "https://github.com/mosesfawole/baroque",
@@ -19,7 +19,7 @@ export const projects: Project[] = [
     title: "HireBoard",
     description:
       "Full-stack job board with role-based auth, company dashboards, admin approval workflow and server-side rendered job listings.",
-    year: "2025",
+    year: "2026",
     type: "Personal Project",
     stack: ["Next.js", "Supabase", "NextAuth", "Zustand", "TypeScript"],
     live: "https://hireboard-steel.vercel.app/",
@@ -31,7 +31,7 @@ export const projects: Project[] = [
     title: "PriceHunt",
     description:
       "Product price aggregator that queries Google Shopping and sorts results by lowest price with server-side caching.",
-    year: "2025",
+    year: "2026",
     type: "Personal Project",
     stack: ["Next.js", "SerpAPI", "TypeScript"],
     live: "https://github.com/mosesfawole/baroque",
@@ -55,7 +55,7 @@ export const projects: Project[] = [
     title: "CryptoView",
     description:
       "Real-time cryptocurrency dashboard with live WebSocket price feeds, an interactive 3D globe showing global exchange activity, and a persistent watchlist.",
-    year: "2025",
+    year: "2026",
     type: "Personal Project",
     stack: ["Next.js", "Three.js", "Zustand", "Binance API"],
     live: "https://crypto-dashboard-ten-beta.vercel.app/dashboard",
@@ -67,7 +67,7 @@ export const projects: Project[] = [
     title: "Mousa",
     description:
       "AI-powered Twitter content dashboard — generate post ideas, expand them into full tweets, and analyze performance with Claude AI.",
-    year: "2025",
+    year: "2026",
     type: "Personal Project",
     stack: ["Next.js", "Claude API", "Supabase"],
     github: "https://github.com/mosesfawole/mousa",
