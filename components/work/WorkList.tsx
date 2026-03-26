@@ -16,7 +16,7 @@ const experience = [
     description:
       "Built and maintained web applications using React, TypeScript and Next.js. Reduced page load time by 30% through code splitting and lazy loading. Collaborated with design team to implement pixel-perfect UIs from Figma prototypes.",
     stack: ["React", "TypeScript", "Next.js", "Redux"],
-    link: "https://paramountstudents.network/",
+    link: "www.github.com/mosesfawole/paramount-students",
   },
   {
     id: "kipclean-exp",
@@ -163,7 +163,7 @@ export default function WorkList() {
                             rel="noopener noreferrer"
                             className="text-xs tracking-widest uppercase font-body text-ink dark:text-cream border-b border-ink dark:border-cream pb-0.5 hover:opacity-60 transition-opacity w-fit"
                           >
-                            Live Site ↗
+                            Live ↗
                           </Link>
                         )}
                         {"github" in item && item.github && (
@@ -173,7 +173,7 @@ export default function WorkList() {
                             rel="noopener noreferrer"
                             className="text-xs tracking-widest uppercase font-body text-muted hover:text-ink dark:hover:text-cream transition-colors w-fit"
                           >
-                            View Code ↗
+                            Code ↗
                           </Link>
                         )}
                         {"link" in item && item.link && !("github" in item) && (
