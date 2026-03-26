@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function AboutHero() {
   return (
-    <section className="min-h-[60vh] flex items-end px-6 md:px-12 pt-32 pb-16">
+    <section className="min-h-[80vh] flex items-end px-6 md:px-12 pt-32 pb-16">
       <div className="max-w-6xl mx-auto w-full">
         <motion.p
           initial={{ opacity: 0, y: 16 }}
