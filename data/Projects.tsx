@@ -34,7 +34,7 @@ export const projects: Project[] = [
     year: "2026",
     type: "Personal Project",
     stack: ["Next.js", "SerpAPI", "TypeScript"],
-    live: "https://github.com/mosesfawole/baroque",
+    live: "https://price-hunt-sand.vercel.app/search",
     github: "https://github.com/mosesfawole/price-hunt",
     featured: false,
   },
