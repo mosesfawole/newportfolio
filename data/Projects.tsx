@@ -66,7 +66,7 @@ export const projects: Project[] = [
     id: "mousa",
     title: "Mousa",
     description:
-      "AI-powered Twitter content dashboard — generate post ideas, expand them into full tweets, and analyze performance with Claude AI.",
+      "AI-powered Twitter content dashboard - generate post ideas, expand them into full tweets, and analyze performance with Claude AI.",
     year: "2026",
     type: "Personal Project",
     stack: ["Next.js", "Claude API", "Supabase"],
