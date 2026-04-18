@@ -5,7 +5,7 @@ export const projects: Project[] = [
     id: "homeland",
     title: "Homeland",
     description:
-      "Verified Nigerian real estate marketplace with agent profiles, property listings, secure authentication, tour booking, and production-ready Supabase-backed infrastructure.",
+      "Trust-first Nigerian property marketplace with verified agents, immersive listing experiences, secure auth flows, booking infrastructure, and production-grade backend hardening for real-world deployment.",
     year: "2026",
     type: "Personal Project",
     live: "https://homeland-rosy.vercel.app/",
@@ -13,6 +13,7 @@ export const projects: Project[] = [
     stack: ["Next.js", "TypeScript", "Supabase", "NextAuth", "Tailwind CSS"],
     featured: true,
   },
+
   {
     id: "baroque",
     title: "Baroque Works",
