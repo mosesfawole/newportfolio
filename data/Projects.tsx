@@ -2,6 +2,18 @@ import type { Project } from "@/types";
 
 export const projects: Project[] = [
   {
+    id: "homeland",
+    title: "Homeland",
+    description:
+      "Verified Nigerian real estate marketplace with agent profiles, property listings, secure authentication, tour booking, and production-ready Supabase-backed infrastructure.",
+    year: "2026",
+    type: "Personal Project",
+    live: "https://homeland-rosy.vercel.app/",
+    github: "https://github.com/mosesfawole/homeland",
+    stack: ["Next.js", "TypeScript", "Supabase", "NextAuth", "Tailwind CSS"],
+    featured: true,
+  },
+  {
     id: "baroque",
     title: "Baroque Works",
     description:
