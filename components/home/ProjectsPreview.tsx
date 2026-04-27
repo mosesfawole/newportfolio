@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "@/hooks/useInView";
 import { projects } from "@/data/Projects";
@@ -60,7 +61,7 @@ export default function ProjectsPreview() {
             >
               <Link
                 href="/work"
-                className="group flex flex-col md:flex-row md:items-center justify-between gap-4 py-8 hover:opacity-60 transition-opacity"
+                className="group grid gap-5 py-8 transition-opacity hover:opacity-75 md:grid-cols-[minmax(0,1fr)_220px_auto] md:items-center"
               >
                 <div className="flex items-start gap-6">
                   <span className="text-xs text-muted font-body mt-1 shrink-0 min-w-[32px]">
@@ -75,6 +76,17 @@ export default function ProjectsPreview() {
                     </p>
                   </div>
                 </div>
+                {project.image && (
+                  <div className="relative ml-10 aspect-[16/10] overflow-hidden border border-border bg-surface dark:border-border-dark dark:bg-surface-dark md:ml-0">
+                    <Image
+                      src={project.image.src}
+                      alt={project.image.alt}
+                      fill
+                      sizes="(max-width: 768px) 70vw, 220px"
+                      className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                    />
+                  </div>
+                )}
                 <div className="flex items-center gap-3 md:shrink-0 pl-10 md:pl-0">
                   {project.stack.slice(0, 2).map((s) => (
                     <span

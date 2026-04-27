@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { projects } from "@/data/Projects";
 import { Plus, Minus } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const experience = [
   {
@@ -43,16 +44,6 @@ const experience = [
     link: "https://training.zuri.team/",
   },
 ];
-
-type Item =
-  | (typeof experience)[0]
-  | ((typeof projects)[0] & {
-      type: string;
-      role?: string;
-      year: string;
-      location?: string;
-      description: string;
-    });
 
 export default function WorkList() {
   const [openId, setOpenId] = useState<string | null>(null);
@@ -154,8 +145,19 @@ export default function WorkList() {
                         </div>
                       </div>
 
-                      {/* Links */}
-                      <div className="flex flex-col gap-3">
+                      {/* Preview and links */}
+                      <div className="flex flex-col gap-4">
+                        {"image" in item && item.image && (
+                          <div className="relative aspect-[16/10] overflow-hidden border border-border bg-surface dark:border-border-dark dark:bg-surface-dark">
+                            <Image
+                              src={item.image.src}
+                              alt={item.image.alt}
+                              fill
+                              sizes="(max-width: 768px) 100vw, 33vw"
+                              className="object-cover"
+                            />
+                          </div>
+                        )}
                         {"live" in item && item.live && (
                           <Link
                             href={item.live}

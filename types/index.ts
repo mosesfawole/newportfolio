@@ -5,6 +5,10 @@ export interface Project {
   year: string;
   type: string;
   stack: string[];
+  image?: {
+    src: string;
+    alt: string;
+  };
   live?: string;
   github?: string;
   featured: boolean;

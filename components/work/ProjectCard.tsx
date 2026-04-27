@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import type { Project } from "@/types";
 import Link from "next/link";
+import Image from "next/image";
 
 interface Props {
   project: Project;
@@ -14,9 +15,21 @@ export default function ProjectCard({ project }: Props) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className="group shrink-0 w-[80vw] md:w-[45vw] lg:w-[36vw] border border-border dark:border-border-dark p-8 flex flex-col justify-between min-h-[420px]"
+      className="group shrink-0 w-[82vw] md:w-[48vw] lg:w-[38vw] border border-border dark:border-border-dark p-5 md:p-6 flex flex-col justify-between min-h-[500px]"
     >
       <div>
+        {project.image && (
+          <div className="relative mb-6 aspect-[16/10] overflow-hidden border border-border bg-surface dark:border-border-dark dark:bg-surface-dark">
+            <Image
+              src={project.image.src}
+              alt={project.image.alt}
+              fill
+              sizes="(max-width: 768px) 82vw, (max-width: 1024px) 48vw, 38vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+            />
+          </div>
+        )}
+
         <div className="flex items-start justify-between mb-6">
           <span className="text-xs text-muted font-body tracking-widest uppercase">
             {project.type} · {project.year}

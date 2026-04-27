@@ -10,6 +10,10 @@ export const projects: Project[] = [
     type: "Personal Project",
     live: "https://homeland-rosy.vercel.app/",
     github: "https://github.com/mosesfawole/homeland",
+    image: {
+      src: "/projects/homeland.png",
+      alt: "Homepage screenshot of Homeland",
+    },
     stack: ["Next.js", "TypeScript", "Supabase", "NextAuth", "Tailwind CSS"],
     featured: true,
   },
@@ -23,6 +27,10 @@ export const projects: Project[] = [
     type: "Personal Project",
     live: "https://baroque-theta.vercel.app/",
     github: "https://github.com/mosesfawole/baroque",
+    image: {
+      src: "/projects/baroque.png",
+      alt: "Homepage screenshot of Baroque Works",
+    },
     stack: ["Next.js", "React Three Fiber", "Framer Motion"],
     featured: true,
   },
@@ -37,6 +45,10 @@ export const projects: Project[] = [
     stack: ["Next.js", "Supabase", "NextAuth", "Zustand", "TypeScript"],
     live: "https://hireboard-steel.vercel.app/",
     github: "https://github.com/mosesfawole/hireboard",
+    image: {
+      src: "/projects/hireboard.png",
+      alt: "Homepage screenshot of HireBoard",
+    },
     featured: true,
   },
   {
@@ -49,6 +61,10 @@ export const projects: Project[] = [
     stack: ["Next.js", "SerpAPI", "TypeScript"],
     live: "https://price-hunt-sand.vercel.app/search",
     github: "https://github.com/mosesfawole/price-hunt",
+    image: {
+      src: "/projects/pricehunt.png",
+      alt: "Search page screenshot of PriceHunt",
+    },
     featured: false,
   },
   {
@@ -61,6 +77,10 @@ export const projects: Project[] = [
     stack: ["React", "Vite", "Tailwind CSS"],
     live: "https://kipclean-v1.vercel.app/",
     github: "https://github.com/mosesfawole/kipclean-v1",
+    image: {
+      src: "/projects/kipclean.png",
+      alt: "Homepage screenshot of KipClean",
+    },
     featured: false,
   },
   {
