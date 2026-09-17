@@ -8,7 +8,7 @@ export default function ThemeToggle() {
     <button
       onClick={toggle}
       className="w-8 h-8 flex items-center justify-center rounded-full transition-colors hover:bg-surface dark:hover:bg-surface-dark"
-      aria-label="Toggle theme"
+      aria-label={dark ? "Switch to light theme" : "Switch to dark theme"}
     >
       {dark ? (
         <Sun size={15} className="text-cream" />

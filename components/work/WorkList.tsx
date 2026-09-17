@@ -17,7 +17,7 @@ const experience = [
     description:
       "Built and maintained web applications using React, TypeScript and Next.js. Reduced page load time by 30% through code splitting and lazy loading. Collaborated with design team to implement pixel-perfect UIs from Figma prototypes.",
     stack: ["React", "TypeScript", "Next.js", "Redux"],
-    link: "www.github.com/mosesfawole/paramount-students",
+    link: "https://github.com/mosesfawole/paramount-students",
   },
   {
     id: "kipclean-exp",
@@ -78,6 +78,8 @@ export default function WorkList() {
             <div key={item.id}>
               <button
                 onClick={() => setOpenId(isOpen ? null : item.id)}
+                aria-expanded={isOpen}
+                aria-controls={`${item.id}-details`}
                 className="w-full text-left px-6 md:px-12 py-6 flex items-center justify-between group hover:bg-surface dark:hover:bg-surface-dark transition-colors"
               >
                 <div className="flex items-center gap-6 md:gap-12 flex-1 min-w-0">
@@ -116,6 +118,7 @@ export default function WorkList() {
               <AnimatePresence>
                 {isOpen && (
                   <motion.div
+                    id={`${item.id}-details`}
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}

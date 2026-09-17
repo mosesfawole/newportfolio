@@ -80,12 +80,12 @@ export default function Cursor() {
     <>
       <div
         ref={dotRef}
-        className="fixed top-0 left-0 z-[9999] w-2 h-2 rounded-full bg-cream pointer-events-none"
+        className="fixed top-0 left-0 z-[9999] w-2 h-2 rounded-full bg-ink dark:bg-cream pointer-events-none"
         style={{ willChange: "transform" }}
       />
       <div
         ref={ringRef}
-        className="fixed top-0 left-0 z-[9998] w-8 h-8 rounded-full border border-cream pointer-events-none"
+        className="fixed top-0 left-0 z-[9998] w-8 h-8 rounded-full border border-ink dark:border-cream pointer-events-none"
         style={{ willChange: "transform", transition: "opacity 0.2s ease" }}
       />
     </>

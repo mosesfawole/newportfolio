@@ -7,10 +7,14 @@ import Link from "next/link";
 export default function ContactPage() {
   const [copied, setCopied] = useState(false);
 
-  const copyEmail = () => {
-    navigator.clipboard.writeText("mosesfawoleh@gmail.com");
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText("mosesfawoleh@gmail.com");
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      window.location.href = "mailto:mosesfawoleh@gmail.com";
+    }
   };
 
   return (
@@ -47,11 +51,19 @@ export default function ContactPage() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col md:flex-row items-start md:items-center gap-8"
           >
-            <button onClick={copyEmail} className="text-left group">
+            <button
+              type="button"
+              onClick={copyEmail}
+              className="text-left group"
+              aria-label="Copy email address"
+            >
               <p className="text-xs tracking-widest uppercase text-muted font-body mb-2">
                 Email
               </p>
-              <p className="font-display font-medium text-ink dark:text-cream text-2xl group-hover:opacity-60 transition-opacity">
+              <p
+                aria-live="polite"
+                className="font-display font-medium text-ink dark:text-cream text-2xl group-hover:opacity-60 transition-opacity"
+              >
                 {copied ? "Copied!" : "mosesfawoleh@gmail.com"}
               </p>
             </button>

@@ -28,7 +28,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="min-h-screen flex flex-col justify-center px-6 md:px-12 pt-16">
+    <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 pt-16">
       <div className="max-w-6xl mx-auto w-full">
         {/* Main headline */}
         <div className="mb-8 overflow-hidden">

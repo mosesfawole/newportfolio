@@ -24,7 +24,44 @@ body {
   color: #111111;
   font-family: var(--font-inter);
   -webkit-font-smoothing: antialiased;
-  cursor: none;
+}
+
+a,
+button {
+  transition-property: color, background-color, border-color, opacity, transform;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+}
+
+a:hover,
+button:hover {
+  transform: translateY(-1px);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  a:hover,
+  button:hover {
+    transform: none;
+  }
 }
 
 .dark body {

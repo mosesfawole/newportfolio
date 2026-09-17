@@ -6,25 +6,15 @@ const ThemeContext = createContext({
   toggle: () => {},
 });
 
-// const getInitialTheme = () => {
-//   if (typeof window === "undefined") {
-//     return false;
-//   }
-
-//   const saved = localStorage.getItem("theme");
-//   return saved === "dark";
-// };
-
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [dark, setDark] = useState(() => {
-    if (typeof window === "undefined") return true;
+    if (typeof window === "undefined") return false;
 
-    return localStorage.getItem("theme") !== "light";
+    const saved = localStorage.getItem("theme");
+    return saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
   });
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
-
     if (dark) {
       document.documentElement.classList.add("dark");
       document.documentElement.classList.remove("light");

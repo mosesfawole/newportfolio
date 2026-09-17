@@ -5,9 +5,9 @@ import ThemeToggle from "./ThemeToggle";
 import { useEffect, useState } from "react";
 
 const links = [
-  { href: "/work", label: "Work" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+  { href: "/work", label: "work" },
+  { href: "/about", label: "about" },
+  { href: "/contact", label: "contact" },
 ];
 
 export default function Navbar() {
@@ -33,7 +33,7 @@ export default function Navbar() {
           href="/"
           className="font-display font-medium text-base text-ink dark:text-cream tracking-tight"
         >
-          MF
+          home
         </Link>
 
         <div className="flex items-center gap-8">
@@ -41,7 +41,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-xs tracking-widest uppercase transition-colors font-body ${
+              className={`text-xs tracking-widest normal-case transition-colors font-body ${
                 pathname === link.href
                   ? "text-ink dark:text-cream"
                   : "text-muted hover:text-ink dark:hover:text-cream"
