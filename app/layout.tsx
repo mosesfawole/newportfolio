@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ui/ThemeProvider";
 import Cursor from "@/components/ui/Cursor";
 import Navbar from "@/components/ui/Navbar";
+import SpotifyPlayer from "@/components/ui/SpotifyPlayer";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -35,6 +36,7 @@ export default function RootLayout({
         <ThemeProvider>
           <Cursor />
           <Navbar />
+          <SpotifyPlayer />
           {children}
         </ThemeProvider>
       </body>
