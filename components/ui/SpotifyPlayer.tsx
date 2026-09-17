@@ -3,7 +3,7 @@ import { ExternalLink, Music2 } from "lucide-react";
 const playlistUrl =
   "https://open.spotify.com/playlist/357cSNAnuaEkQNffqXfxGv";
 const embedUrl =
-  "https://open.spotify.com/embed/playlist/357cSNAnuaEkQNffqXfxGv?utm_source=generator";
+  "https://open.spotify.com/embed/playlist/357cSNAnuaEkQNffqXfxGv?utm_source=generator&theme=0";
 
 export default function SpotifyPlayer() {
   return (
@@ -31,9 +31,9 @@ export default function SpotifyPlayer() {
           src={embedUrl}
           title="Moses Fawole's Spotify playlist"
           width="100%"
-          height="152"
+          height="352"
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
+          loading="eager"
           className="block"
         />
       </div>
