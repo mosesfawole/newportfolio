@@ -23,11 +23,15 @@ export default function Cursor() {
       return;
     }
 
-    const onMove = (e: MouseEvent) => {
+    const onMove = (e: PointerEvent) => {
       mouse.current = { x: e.clientX, y: e.clientY };
 
       if (dotRef.current) {
         dotRef.current.style.transform = `translate(${e.clientX - 4}px, ${e.clientY - 4}px)`;
+        dotRef.current.style.opacity = "1";
+      }
+      if (ringRef.current) {
+        ringRef.current.style.opacity = "1";
       }
     };
 
@@ -62,14 +66,14 @@ export default function Cursor() {
       if (ringRef.current) ringRef.current.style.opacity = "1";
     };
 
-    window.addEventListener("mousemove", onMove, { passive: true });
+    window.addEventListener("pointermove", onMove, { passive: true });
     window.addEventListener("mouseover", onPointerOver, { passive: true });
     window.addEventListener("mouseout", onPointerOut, { passive: true });
 
     frame.current = requestAnimationFrame(animate);
 
     return () => {
-      window.removeEventListener("mousemove", onMove);
+      window.removeEventListener("pointermove", onMove);
       window.removeEventListener("mouseover", onPointerOver);
       window.removeEventListener("mouseout", onPointerOut);
       cancelAnimationFrame(frame.current);
@@ -81,12 +85,16 @@ export default function Cursor() {
       <div
         ref={dotRef}
         className="fixed top-0 left-0 z-[9999] w-2 h-2 rounded-full bg-ink dark:bg-cream pointer-events-none"
-        style={{ willChange: "transform" }}
+        style={{ willChange: "transform", opacity: 0 }}
       />
       <div
         ref={ringRef}
         className="fixed top-0 left-0 z-[9998] w-8 h-8 rounded-full border border-ink dark:border-cream pointer-events-none"
-        style={{ willChange: "transform", transition: "opacity 0.2s ease" }}
+        style={{
+          willChange: "transform",
+          opacity: 0,
+          transition: "opacity 0.2s ease",
+        }}
       />
     </>
   );
