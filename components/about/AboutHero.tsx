@@ -16,7 +16,7 @@ export default function AboutHero() {
         </motion.p>
         <LetterReveal
           lines={[
-            { text: "Building the web," },
+            { text: "Building the web,", breakAfter: true },
             { text: "one pixel at a time.", italic: true },
           ]}
           className="font-display font-medium text-ink dark:text-cream leading-tight"

@@ -6,6 +6,7 @@ import { useInView } from "@/hooks/useInView";
 interface Line {
   text: string;
   italic?: boolean;
+  breakAfter?: boolean;
 }
 
 interface Props {
@@ -60,7 +61,7 @@ export default function LetterReveal({ lines, className = "", style }: Props) {
                   {character === " " ? "\u00a0" : character}
                 </motion.span>
               ))}
-              {lineIndex < lines.length - 1 && <br />}
+              {line.breakAfter && <br />}
             </span>
           ))}
         </span>

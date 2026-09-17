@@ -40,7 +40,11 @@ export default function Hero() {
 
         <div className="mb-8 overflow-hidden">
           <LetterReveal
-            lines={[{ text: "people " }, { text: "actually", italic: true }, { text: " use." }]}
+            lines={[
+              { text: "people " },
+              { text: "actually", italic: true },
+              { text: " use." },
+            ]}
             className="font-display font-medium leading-none text-ink dark:text-cream text-[clamp(52px,9vw,120px)] tracking-[-0.02em]"
           />
         </div>
