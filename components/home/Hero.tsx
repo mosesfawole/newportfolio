@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useScramble } from "@/hooks/useScramble";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import LetterReveal from "@/components/ui/LetterReveal";
 
 const roles = [
   "Frontend Engineer",
@@ -30,32 +31,18 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 pt-16">
       <div className="max-w-6xl mx-auto w-full">
-        {/* Main headline */}
         <div className="mb-8 overflow-hidden">
-          <motion.h1
-            initial={{ y: 80, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+          <LetterReveal
+            lines={[{ text: "I build things" }]}
             className="font-display font-medium leading-none text-ink dark:text-cream text-[clamp(52px,9vw,120px)] tracking-[-0.02em]"
-          >
-            I build things
-            <br />
-          </motion.h1>
+          />
         </div>
 
-        <div className="overflow-hidden mb-8">
-          <motion.h1
-            initial={{ y: 80, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{
-              duration: 0.8,
-              ease: [0.22, 1, 0.36, 1],
-              delay: 0.35,
-            }}
-            className="font-display italic font-medium leading-none text-ink dark:text-cream text-[clamp(52px,9vw,120px)] tracking-[-0.02em]"
-          >
-            people <em>actually</em> use.
-          </motion.h1>
+        <div className="mb-8 overflow-hidden">
+          <LetterReveal
+            lines={[{ text: "people " }, { text: "actually", italic: true }, { text: " use." }]}
+            className="font-display font-medium leading-none text-ink dark:text-cream text-[clamp(52px,9vw,120px)] tracking-[-0.02em]"
+          />
         </div>
 
         {/* Scramble role */}

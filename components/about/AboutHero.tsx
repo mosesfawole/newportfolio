@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import LetterReveal from "@/components/ui/LetterReveal";
 
 export default function AboutHero() {
   return (
@@ -13,21 +14,18 @@ export default function AboutHero() {
         >
           About
         </motion.p>
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+        <LetterReveal
+          lines={[
+            { text: "Building the web," },
+            { text: "one pixel at a time.", italic: true },
+          ]}
           className="font-display font-medium text-ink dark:text-cream leading-tight"
           style={{
             fontSize: "clamp(40px, 7vw, 88px)",
             letterSpacing: "-0.02em",
             maxWidth: "800px",
           }}
-        >
-          Building the web,
-          <br />
-          <em>one pixel at a time.</em>
-        </motion.h1>
+        />
       </div>
     </section>
   );
