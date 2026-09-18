@@ -146,6 +146,14 @@ export default function WorkList() {
                             </span>
                           ))}
                         </div>
+                        {item.type === "project" && (
+                          <Link
+                            href={`/work/${item.id}`}
+                            className="inline-flex w-fit items-center font-body text-xs uppercase tracking-widest text-ink dark:text-cream"
+                          >
+                            Full project details ↗
+                          </Link>
+                        )}
                       </div>
 
                       {/* Preview and links */}

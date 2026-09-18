@@ -30,26 +30,6 @@ export default function ProjectsPreview() {
           </Link>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.55, delay: 0.08 }}
-          className="mb-12"
-        >
-          <div className="inline-flex max-w-xl flex-col gap-3 border border-border bg-black/[0.03] px-5 py-4 text-ink dark:border-border-dark dark:bg-white/[0.04] dark:text-cream">
-            <span className="text-[10px] font-body uppercase tracking-[0.35em] text-muted">
-              Soft Launch Note
-            </span>
-            <p className="font-display text-[clamp(18px,2.3vw,24px)] leading-snug tracking-[-0.02em]">
-              This site is probably still under construction.
-            </p>
-            <p className="max-w-lg font-body text-sm leading-relaxed text-muted">
-              The foundation is here, the polish is ongoing, and a few edges
-              are still being sanded down in public.
-            </p>
-          </div>
-        </motion.div>
-
         {/* Project list */}
         <div className="divide-y divide-border dark:divide-border-dark">
           {featured.map((project, i) => (
@@ -60,7 +40,7 @@ export default function ProjectsPreview() {
               transition={{ duration: 0.5, delay: i * 0.12 }}
             >
               <Link
-                href="/work"
+                href={`/work/${project.id}`}
                 className="group grid gap-5 py-8 transition-opacity hover:opacity-75 md:grid-cols-[minmax(0,1fr)_220px_auto] md:items-center"
               >
                 <div className="flex items-start gap-6">
