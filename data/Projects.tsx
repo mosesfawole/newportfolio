@@ -2,6 +2,43 @@ import type { Project } from "@/types";
 
 export const projects: Project[] = [
   {
+    id: "near-replay-lab",
+    title: "NEAR Replay Lab",
+    description:
+      "A test harness and dashboard for agent payments. Replays five payment scenarios on NEAR testnet and uses finalized receipts and balance changes to verify who got paid.",
+    year: "2026",
+    type: "Hackathon Project",
+    github: "https://github.com/mosesfawole/near-replay-lab",
+    image: {
+      src: "/projects/near-replay-lab.jpg",
+      alt: "NEAR Replay Lab dashboard comparing two recorded testnet payment outcomes",
+    },
+    stack: ["TypeScript", "Rust", "Next.js", "NEAR"],
+    featured: true,
+  },
+  {
+    id: "releaseroom",
+    title: "ReleaseRoom",
+    description:
+      "A Mattermost workflow where an AI agent prepares a patch, automated checks verify it, and a human approves the exact patch hash before the handoff is exported.",
+    year: "2026",
+    type: "Hackathon Project",
+    github: "https://github.com/mosesfawole/releaseroom",
+    stack: ["Switch", "Mattermost", "Codex"],
+    featured: false,
+  },
+  {
+    id: "clearcart",
+    title: "ClearCart",
+    description:
+      "An AI-assisted shopping prototype that checks a basket against a budget, asks the buyer to approve checkout, and verifies the resulting PayPal sandbox receipt.",
+    year: "2026",
+    type: "Hackathon Project",
+    github: "https://github.com/mosesfawole/clearcart",
+    stack: ["PayPal Sandbox", "AI Workflows"],
+    featured: false,
+  },
+  {
     id: "homeland",
     title: "Homeland",
     description:
