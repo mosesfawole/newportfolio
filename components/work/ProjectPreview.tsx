@@ -9,10 +9,10 @@ const flows: Record<string, { label: string; title: string; subtitle: string; st
   "claude-referral-monitor": { label: "Automation", title: "Less searching. Better alerts.", subtitle: "Claude Pass Radar / Telegram", steps: ["Check public sources", "Filter stale offers", "Deduplicate links", "Send Telegram alert"], note: "Scheduled scans · Free-budget controls · Redemption not guaranteed" },
 };
 
-export default function ProjectPreview({ project }: { project: Project }) {
+export default function ProjectPreview({ project, large = false }: { project: Project; large?: boolean }) {
   const flow = flows[project.id];
-  if (!flow) return <div className={`visual-preview visual-${project.id}`}>
-    {project.image ? <Image src={project.image.src} alt={project.image.alt} fill quality={100} sizes="(max-width: 767px) 100vw, 70vw" className="preview-photo" /> : <div className="preview-generic"><p>{project.type}</p><strong>{project.title}</strong><span>{project.stack.slice(0, 3).join(" · ")}</span></div>}
+  if (!flow) return <div className={`visual-preview ${project.image ? "screenshot-preview" : ""} visual-${project.id}`}>
+    {project.image ? <Image src={project.image.src} alt={project.image.alt} width={1920} height={878} quality={100} sizes={large ? "(max-width: 1248px) calc(100vw - 72px), 1126px" : "(max-width: 767px) calc(100vw - 72px), (max-width: 1248px) calc(50vw - 80px), 528px"} className="preview-photo" /> : <div className="preview-generic"><p>{project.type}</p><strong>{project.title}</strong><span>{project.stack.slice(0, 3).join(" · ")}</span></div>}
   </div>;
 
   return <div className={`visual-preview workflow-preview visual-${project.id}`}>

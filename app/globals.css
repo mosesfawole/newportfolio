@@ -331,10 +331,14 @@ header nav > div > a.text-ink { background: var(--panel); }
  .detail-preview .preview-steps > div { font-size: .875rem; padding: .6rem; }
  .detail-preview .preview-subtitle { font-size: .875rem; }
  .detail-preview .preview-note { font-size: .75rem; }
- .detail-preview .preview-photo { position: relative !important; height: auto !important; width: 100% !important; min-height: 300px; object-fit: contain; }
+
 }
 @media(prefers-reduced-motion:reduce) { .page-enter,.reveal[data-revealed="true"],.hero-reveal[data-revealed="true"] .hero-title,.hero-reveal[data-revealed="true"] .hero-bottom { animation: none; } .project-visual-link:hover .visual-preview { transform: none; } }
 
 .original-image { max-height: 85vh; width: auto; max-width: 100%; margin-inline: auto; }
 
 .preview-title { font-family: var(--font-heading), var(--font-ui); }
+
+/* Website captures retain their full native proportions instead of a tall thumbnail slot. */
+.screenshot-preview, .detail-preview .screenshot-preview { aspect-ratio: auto; min-height: 0; padding: .8rem; }
+.screenshot-preview .preview-photo { display: block; position: relative; width: 100%; height: auto; min-height: 0; object-fit: contain; object-position: center; padding: 0; border-radius: .65rem; }
