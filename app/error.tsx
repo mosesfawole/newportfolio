@@ -18,7 +18,7 @@ export default function Error({
         <p className="text-muted dark:text-border-dark mb-4">
           Sorry, an unexpected error occurred. Please try refreshing the page.
         </p>
-        <p className="text-xs text-muted dark:text-border-dark mb-8">
+        <p className="text-[14px] text-muted dark:text-border-dark mb-8">
           {error.message}
         </p>
         <div className="flex gap-4 justify-center">

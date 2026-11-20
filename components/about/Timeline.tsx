@@ -4,6 +4,12 @@ import { useInView } from "@/hooks/useInView";
 
 const items = [
   {
+    year: "2026",
+    title: "Independent projects",
+    role: "AI & Full-Stack Developer",
+    detail: "Building AI application workflows, payment verification tools, and local-first prototypes. Selected work includes ReleaseRoom, ClearCart, and NEAR Replay Lab.",
+  },
+  {
     year: "2025",
     title: "Paramount Students",
     role: "Frontend Developer",
@@ -39,7 +45,7 @@ export default function Timeline() {
           initial={{ opacity: 0, y: 16 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-xs tracking-[0.3em] uppercase text-muted font-body mb-12"
+          className="text-[14px] tracking-[0.3em] uppercase text-muted font-body mb-12"
         >
           Experience
         </motion.p>
@@ -53,7 +59,7 @@ export default function Timeline() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="py-8 grid grid-cols-1 md:grid-cols-4 gap-4"
             >
-              <p className="text-xs text-muted font-body tracking-widest">
+              <p className="text-[14px] text-muted font-body tracking-widest">
                 {item.year}
               </p>
               <div className="md:col-span-3">
@@ -61,11 +67,11 @@ export default function Timeline() {
                   <h3 className="font-display font-medium text-ink dark:text-cream text-lg">
                     {item.title}
                   </h3>
-                  <span className="text-xs text-muted font-body">
+                  <span className="text-[14px] text-muted font-body">
                     — {item.role}
                   </span>
                 </div>
-                <p className="text-sm font-body font-light text-muted leading-relaxed">
+                <p className="text-base font-body font-light text-muted leading-relaxed">
                   {item.detail}
                 </p>
               </div>

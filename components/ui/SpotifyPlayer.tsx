@@ -129,7 +129,7 @@ export default function SpotifyPlayer() {
         >
           <div className="flex items-center gap-2 text-muted">
             <Music2 size={14} aria-hidden="true" />
-            <span className="font-body text-[10px] uppercase tracking-[0.2em]">
+            <span className="font-body text-[14px] uppercase tracking-[0.2em]">
               now playing
             </span>
           </div>
@@ -138,7 +138,7 @@ export default function SpotifyPlayer() {
               href={playlistUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 font-body text-[10px] uppercase tracking-wider text-muted hover:text-ink dark:hover:text-cream"
+              className="flex items-center gap-1 font-body text-[14px] uppercase tracking-wider text-muted hover:text-ink dark:hover:text-cream"
             >
               Spotify
               <ExternalLink size={11} aria-hidden="true" />

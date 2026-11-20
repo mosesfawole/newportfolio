@@ -10,14 +10,14 @@ export default function AboutHero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-xs tracking-[0.3em] uppercase text-muted font-body mb-6"
+          className="text-[14px] tracking-[0.3em] uppercase text-muted font-body mb-6"
         >
           About
         </motion.p>
         <LetterReveal
           lines={[
-            { text: "Building the web,", breakAfter: true },
-            { text: "one pixel at a time.", italic: true },
+            { text: "Curious about the problem.", breakAfter: true },
+            { text: "Careful with the details.", italic: true },
           ]}
           className="font-display font-medium text-ink dark:text-cream leading-tight"
           style={{

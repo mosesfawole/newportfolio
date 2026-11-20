@@ -15,7 +15,7 @@ export default function ContactStrip() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-xs tracking-[0.3em] uppercase text-muted font-body mb-8"
+          className="text-[14px] tracking-[0.3em] uppercase text-muted font-body mb-8"
         >
           Let&apos;s Work Together
         </motion.p>
@@ -36,9 +36,9 @@ export default function ContactStrip() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.25 }}
-          className="inline-block font-body text-xs tracking-widest uppercase text-ink dark:text-cream border-b border-ink dark:border-cream pb-0.5 hover:opacity-60 transition-opacity"
+          className="inline-block font-body text-[14px] tracking-widest uppercase text-ink dark:text-cream border-b border-ink dark:border-cream pb-0.5 hover:opacity-60 transition-opacity"
         >
-          Get in Touch →
+          Get in Touch
         </motion.a>
       </div>
     </section>

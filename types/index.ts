@@ -12,4 +12,9 @@ export interface Project {
   live?: string;
   github?: string;
   featured: boolean;
+  demo?: string;
+  problem?: string;
+  approach?: string;
+  evidence?: string;
+  scope?: string;
 }

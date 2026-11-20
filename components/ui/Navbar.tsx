@@ -33,16 +33,16 @@ export default function Navbar() {
           href="/"
           className="font-display font-medium text-base text-ink dark:text-cream tracking-tight"
         >
-          home
+          <span className="brand-full">Moses Fawole</span><span className="brand-short">MF.</span>
         </Link>
 
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-4 sm:gap-8">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`text-xs tracking-widest normal-case transition-colors font-body ${
-                pathname === link.href
+              className={`text-[14px] tracking-widest normal-case transition-colors font-body ${
+                pathname.startsWith(link.href)
                   ? "text-ink dark:text-cream"
                   : "text-muted hover:text-ink dark:hover:text-cream"
               }`}

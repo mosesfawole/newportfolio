@@ -17,8 +17,8 @@ const skillGroups = [
     ],
   },
   {
-    label: "3D & Animation",
-    skills: ["Three.js", "React Three Fiber", "@react-three/drei", "GSAP"],
+    label: "AI & Workflows",
+    skills: ["Model API integration", "Structured outputs", "Agent workflows", "Human approval gates", "Codex", "Claude API", "Gemini API"],
   },
   {
     label: "Backend & Data",
@@ -34,7 +34,7 @@ const skillGroups = [
   },
   {
     label: "Tooling",
-    skills: ["Git", "GitHub", "Vercel", "Figma", "Vite", "Docker (familiar)"],
+    skills: ["Git & GitHub", "Vercel", "Automated checks", "Figma", "Three.js", "React Three Fiber"],
   },
 ];
 
@@ -51,7 +51,7 @@ export default function Skills() {
           initial={{ opacity: 0, y: 16 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-xs tracking-[0.3em] uppercase text-muted font-body mb-12"
+          className="text-[14px] tracking-[0.3em] uppercase text-muted font-body mb-12"
         >
           Skills
         </motion.p>
@@ -64,14 +64,14 @@ export default function Skills() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.08 }}
             >
-              <p className="text-xs tracking-widest uppercase text-muted font-body mb-4">
+              <p className="text-[14px] tracking-widest uppercase text-muted font-body mb-4">
                 {group.label}
               </p>
               <div className="flex flex-col gap-2">
                 {group.skills.map((skill) => (
                   <p
                     key={skill}
-                    className="text-sm font-body font-light text-ink dark:text-cream"
+                    className="text-base font-body font-light text-ink dark:text-cream"
                   >
                     {skill}
                   </p>

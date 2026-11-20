@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/ThemeProvider";
-import Cursor from "@/components/ui/Cursor";
 import Navbar from "@/components/ui/Navbar";
-import SpotifyPlayer from "@/components/ui/SpotifyPlayer";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -20,9 +18,16 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Moses Fawole — Frontend Engineer",
+  metadataBase: new URL("https://mosesfawole.vercel.app"),
+  title: "Moses Fawole — AI & Full-Stack Developer",
   description:
-    "Frontend engineer building fast, beautiful, functional products. React, Next.js, TypeScript, Three.js.",
+    "AI & Full-Stack Developer based in Lagos. Explore AI workflows, payment verification tools, and thoughtful web products built with TypeScript, React, Next.js, and Node.js.",
+  openGraph: {
+    title: "Moses Fawole — AI & Full-Stack Developer",
+    description: "Thoughtful software. Useful AI. Explore selected projects, demos, and source code.",
+    url: "https://mosesfawole.vercel.app",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -34,9 +39,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${playfair.variable} ${inter.variable}`}>
         <ThemeProvider>
-          <Cursor />
+          <a href="#main-content" className="skip-link">Skip to content</a>
           <Navbar />
-          <SpotifyPlayer />
           {children}
         </ThemeProvider>
       </body>

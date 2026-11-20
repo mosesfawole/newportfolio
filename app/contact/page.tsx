@@ -18,14 +18,14 @@ export default function ContactPage() {
   };
 
   return (
-    <main>
+    <main id="main-content">
       <section className="min-h-[80vh] flex items-center px-6 md:px-12 pt-16">
         <div className="max-w-6xl mx-auto w-full">
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-xs tracking-[0.3em] uppercase text-muted font-body mb-8"
+            className="text-[14px] tracking-[0.3em] uppercase text-muted font-body mb-8"
           >
             Contact
           </motion.p>
@@ -57,7 +57,7 @@ export default function ContactPage() {
               className="text-left group"
               aria-label="Copy email address"
             >
-              <p className="text-xs tracking-widest uppercase text-muted font-body mb-2">
+              <p className="text-[14px] tracking-widest uppercase text-muted font-body mb-2">
                 Email
               </p>
               <p
@@ -71,7 +71,7 @@ export default function ContactPage() {
             <div className="hidden md:block w-px h-12 bg-border dark:bg-border-dark" />
 
             <div>
-              <p className="text-xs tracking-widest uppercase text-muted font-body mb-2">
+              <p className="text-[14px] tracking-widest uppercase text-muted font-body mb-2">
                 GitHub
               </p>
 
@@ -81,7 +81,7 @@ export default function ContactPage() {
                 rel="noopener noreferrer"
                 className="font-display font-medium text-ink dark:text-cream text-2xl hover:opacity-60 transition-opacity"
               >
-                mosesfawole ↗
+                mosesfawole
               </Link>
             </div>
           </motion.div>

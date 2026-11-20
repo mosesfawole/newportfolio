@@ -68,7 +68,7 @@ export default function WorkList() {
 
   const renderList = (items: typeof allItems, label: string) => (
     <div className="mb-16">
-      <p className="text-xs tracking-[0.3em] uppercase text-muted font-body mb-6 px-6 md:px-12">
+      <p className="text-[14px] tracking-[0.3em] uppercase text-muted font-body mb-6 px-6 md:px-12">
         {label}
       </p>
       <div className="divide-y divide-border dark:divide-border-dark border-t border-b border-border dark:border-border-dark">
@@ -83,7 +83,7 @@ export default function WorkList() {
                 className="w-full text-left px-6 md:px-12 py-6 flex items-center justify-between group hover:bg-surface dark:hover:bg-surface-dark transition-colors"
               >
                 <div className="flex items-center gap-6 md:gap-12 flex-1 min-w-0">
-                  <span className="text-xs text-muted font-body shrink-0 hidden md:block">
+                  <span className="text-[14px] text-muted font-body shrink-0 hidden md:block">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div className="min-w-0">
@@ -93,7 +93,7 @@ export default function WorkList() {
                     >
                       {item.title}
                     </h3>
-                    <p className="text-xs text-muted font-body mt-1">
+                    <p className="text-[14px] text-muted font-body mt-1">
                       {item.role} · {item.year}
                     </p>
                   </div>
@@ -103,7 +103,7 @@ export default function WorkList() {
                     {item.stack?.slice(0, 2).map((s: string) => (
                       <span
                         key={s}
-                        className="text-[10px] tracking-wider uppercase text-muted border border-border dark:border-border-dark px-2 py-1 font-body"
+                        className="text-[14px] tracking-wider uppercase text-muted border border-border dark:border-border-dark px-2 py-1 font-body"
                       >
                         {s}
                       </span>
@@ -128,11 +128,11 @@ export default function WorkList() {
                     <div className="px-6 md:px-12 pb-8 pt-2 grid grid-cols-1 md:grid-cols-3 gap-8">
                       {/* Description */}
                       <div className="md:col-span-2 space-y-4">
-                        <p className="text-sm font-body font-light text-muted leading-relaxed">
+                        <p className="text-base font-body font-light text-muted leading-relaxed">
                           {item.description}
                         </p>
                         {item.location && (
-                          <p className="text-xs text-muted font-body tracking-wide">
+                          <p className="text-[14px] text-muted font-body tracking-wide">
                             📍 {item.location}
                           </p>
                         )}
@@ -140,7 +140,7 @@ export default function WorkList() {
                           {item.stack?.map((s: string) => (
                             <span
                               key={s}
-                              className="text-[11px] tracking-wider uppercase text-muted border border-border dark:border-border-dark px-2 py-1 font-body"
+                              className="text-[14px] tracking-wider uppercase text-muted border border-border dark:border-border-dark px-2 py-1 font-body"
                             >
                               {s}
                             </span>
@@ -149,9 +149,9 @@ export default function WorkList() {
                         {item.type === "project" && (
                           <Link
                             href={`/work/${item.id}`}
-                            className="inline-flex w-fit items-center font-body text-xs uppercase tracking-widest text-ink dark:text-cream"
+                            className="inline-flex w-fit items-center font-body text-[14px] uppercase tracking-widest text-ink dark:text-cream"
                           >
-                            Full project details ↗
+                            Full project details
                           </Link>
                         )}
                       </div>
@@ -174,9 +174,9 @@ export default function WorkList() {
                             href={item.live}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-xs tracking-widest uppercase font-body text-ink dark:text-cream border-b border-ink dark:border-cream pb-0.5 hover:opacity-60 transition-opacity w-fit"
+                            className="text-[14px] tracking-widest uppercase font-body text-ink dark:text-cream border-b border-ink dark:border-cream pb-0.5 hover:opacity-60 transition-opacity w-fit"
                           >
-                            Live ↗
+                            Live
                           </Link>
                         )}
                         {"github" in item && item.github && (
@@ -184,9 +184,9 @@ export default function WorkList() {
                             href={item.github}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-xs tracking-widest uppercase font-body text-muted hover:text-ink dark:hover:text-cream transition-colors w-fit"
+                            className="text-[14px] tracking-widest uppercase font-body text-muted hover:text-ink dark:hover:text-cream transition-colors w-fit"
                           >
-                            Code ↗
+                            Code
                           </Link>
                         )}
                         {"link" in item && item.link && !("github" in item) && (
@@ -194,9 +194,9 @@ export default function WorkList() {
                             href={item.link as string}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-xs tracking-widest uppercase font-body text-ink dark:text-cream border-b border-ink dark:border-cream pb-0.5 hover:opacity-60 transition-opacity w-fit"
+                            className="text-[14px] tracking-widest uppercase font-body text-ink dark:text-cream border-b border-ink dark:border-cream pb-0.5 hover:opacity-60 transition-opacity w-fit"
                           >
-                            Visit ↗
+                            Visit
                           </Link>
                         )}
                       </div>

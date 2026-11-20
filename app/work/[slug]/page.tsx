@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ExternalLink } from "lucide-react";
 import { notFound } from "next/navigation";
 import Footer from "@/components/ui/Footer";
 import { projects } from "@/data/Projects";
@@ -38,15 +37,14 @@ export default async function ProjectPage({ params }: Props) {
         <div className="mx-auto max-w-6xl">
           <Link
             href="/work"
-            className="mb-16 inline-flex items-center gap-2 font-body text-xs uppercase tracking-widest text-muted hover:text-ink dark:hover:text-cream"
+            className="mb-16 inline-flex items-center gap-2 font-body text-[14px] uppercase tracking-widest text-muted hover:text-ink dark:hover:text-cream"
           >
-            <ArrowLeft size={13} aria-hidden="true" />
             Back to work
           </Link>
 
           <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_280px] lg:items-end">
             <div>
-              <p className="mb-5 font-body text-xs uppercase tracking-[0.3em] text-muted">
+              <p className="mb-5 font-body text-[14px] uppercase tracking-[0.3em] text-muted">
                 {project.type} · {project.year}
               </p>
               <h1 className="max-w-4xl font-display text-[clamp(48px,9vw,120px)] font-medium leading-none tracking-[-0.02em] text-ink dark:text-cream">
@@ -55,14 +53,14 @@ export default async function ProjectPage({ params }: Props) {
             </div>
 
             <div className="space-y-6">
-              <p className="font-body text-sm font-light leading-relaxed text-muted">
+              <p className="font-body text-base font-light leading-relaxed text-muted">
                 {project.description}
               </p>
               <div className="flex flex-wrap gap-2">
                 {project.stack.map((item) => (
                   <span
                     key={item}
-                    className="border border-border px-2 py-1 font-body text-[11px] uppercase tracking-wider text-muted dark:border-border-dark"
+                    className="border border-border px-2 py-1 font-body text-[14px] uppercase tracking-wider text-muted dark:border-border-dark"
                   >
                     {item}
                   </span>
@@ -74,9 +72,9 @@ export default async function ProjectPage({ params }: Props) {
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 font-body text-xs uppercase tracking-widest text-ink dark:text-cream"
+                    className="inline-flex items-center gap-2 font-body text-[14px] uppercase tracking-widest text-ink dark:text-cream"
                   >
-                    Live project <ExternalLink size={13} aria-hidden="true" />
+                    Live project
                   </Link>
                 )}
                 {project.github && (
@@ -84,11 +82,12 @@ export default async function ProjectPage({ params }: Props) {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 font-body text-xs uppercase tracking-widest text-muted hover:text-ink dark:hover:text-cream"
+                    className="inline-flex items-center gap-2 font-body text-[14px] uppercase tracking-widest text-muted hover:text-ink dark:hover:text-cream"
                   >
-                    Source code <ExternalLink size={13} aria-hidden="true" />
+                    Source code
                   </Link>
                 )}
+                {project.demo && <a href={project.demo} target="_blank" rel="noopener noreferrer" className="secondary-link">Watch demo</a>}
               </div>
             </div>
           </div>
@@ -103,6 +102,18 @@ export default async function ProjectPage({ params }: Props) {
                 sizes="(max-width: 1024px) 100vw, 1200px"
                 className="object-cover"
               />
+            </div>
+          )}
+          {project.problem && (
+            <div className="case-study">
+              {[
+                ["The problem", project.problem],
+                ["What I built", project.approach],
+                ["Evidence", project.evidence],
+                ["Current scope", project.scope],
+              ].map(([heading, copy]) => copy && (
+                <section key={heading}><h2>{heading}</h2><p>{copy}</p></section>
+              ))}
             </div>
           )}
         </div>

@@ -7,10 +7,10 @@ export const metadata = {
 
 export default function WorkPage() {
   return (
-    <main>
+    <main id="main-content">
       <section className="px-6 md:px-12 pt-36 pb-16">
         <div className="max-w-6xl mx-auto">
-          <p className="text-xs tracking-[0.3em] uppercase text-muted font-body mb-4">
+          <p className="text-[14px] tracking-[0.3em] uppercase text-muted font-body mb-4">
             Selected Work
           </p>
           <h1

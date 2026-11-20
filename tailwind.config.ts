@@ -10,11 +10,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        cream: "#fafaf8",
+        cream: "#ffffff",
         ink: "#111111",
         surface: "#f0f0ee",
         "surface-dark": "#1a1a1a",
-        muted: "#888888",
+        muted: "#626662",
         border: "#e0e0de",
         "border-dark": "#2a2a2a",
       },

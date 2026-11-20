@@ -31,7 +31,7 @@ export default function ProjectCard({ project }: Props) {
         )}
 
         <div className="flex items-start justify-between mb-6">
-          <span className="text-xs text-muted font-body tracking-widest uppercase">
+          <span className="text-[14px] text-muted font-body tracking-widest uppercase">
             {project.type} · {project.year}
           </span>
           <div className="flex gap-3">
@@ -40,9 +40,9 @@ export default function ProjectCard({ project }: Props) {
                 href={project.live}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[11px] tracking-wider uppercase font-body text-muted hover:text-ink dark:hover:text-cream transition-colors"
+                className="text-[14px] tracking-wider uppercase font-body text-muted hover:text-ink dark:hover:text-cream transition-colors"
               >
-                Live ↗
+                Live
               </Link>
             )}
             {project.github && (
@@ -50,9 +50,9 @@ export default function ProjectCard({ project }: Props) {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[11px] tracking-wider uppercase font-body text-muted hover:text-ink dark:hover:text-cream transition-colors"
+                className="text-[14px] tracking-wider uppercase font-body text-muted hover:text-ink dark:hover:text-cream transition-colors"
               >
-                Code ↗
+                Code
               </Link>
             )}
           </div>
@@ -62,7 +62,7 @@ export default function ProjectCard({ project }: Props) {
           {project.title}
         </h3>
 
-        <p className="text-sm font-body font-light text-muted leading-relaxed">
+        <p className="text-base font-body font-light text-muted leading-relaxed">
           {project.description}
         </p>
       </div>
@@ -71,7 +71,7 @@ export default function ProjectCard({ project }: Props) {
         {project.stack.map((s) => (
           <span
             key={s}
-            className="text-[11px] tracking-wider uppercase text-muted border border-border dark:border-border-dark px-2 py-1 font-body"
+            className="text-[14px] tracking-wider uppercase text-muted border border-border dark:border-border-dark px-2 py-1 font-body"
           >
             {s}
           </span>
