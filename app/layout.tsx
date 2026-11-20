@@ -1,21 +1,17 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/ThemeProvider";
 import Navbar from "@/components/ui/Navbar";
 
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-  weight: ["400", "500", "700"],
-  style: ["normal", "italic"],
+const playfair = localFont({
+  src: [
+    { path: "./fonts/PlayfairDisplay.ttf", weight: "400 700", style: "normal" },
+    { path: "./fonts/PlayfairDisplay-Italic.ttf", weight: "400 700", style: "italic" },
+  ],
+  variable: "--font-playfair", display: "swap",
 });
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  weight: ["300", "400", "500"],
-});
+const heading = localFont({ src: "./fonts/Manrope.ttf", variable: "--font-heading", weight: "400 700", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mosesfawole.vercel.app"),
@@ -36,8 +32,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${playfair.variable} ${inter.variable}`}>
+    <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: `try{var t=localStorage.getItem('theme');var d=t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.classList.toggle('dark',d);document.documentElement.style.colorScheme=d?'dark':'light'}catch(e){}` }} />
+      </head>
+      <body className={`${playfair.variable} ${heading.variable}`}>
         <ThemeProvider>
           <a href="#main-content" className="skip-link">Skip to content</a>
           <Navbar />

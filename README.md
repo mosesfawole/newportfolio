@@ -24,10 +24,16 @@ Keep prototypes and sandbox integrations clearly labeled. Do not present recorde
 
 ## Design
 
-The November 2026 refresh uses Jonas as a visual reference: https://www.framer.com/marketplace/templates/46440/ and https://jonas-template.framer.website/ . The original implementation adapts its spacious introduction, clear typography, project grid, and restrained navigation. No paid template source or assets were used. Inter and Playfair Display retain the existing font pairing.
+The November 2026 refresh uses Jonas as a visual reference: https://www.framer.com/marketplace/templates/46440/ and https://jonas-template.framer.website/ . The original implementation adapts its spacious introduction, clear typography, project grid, and restrained navigation. No paid template source or assets were used. Manrope headings pair with native Apple/Segoe UI text and selected Playfair Display accents across all pages.
 
-The project screenshots come from the corresponding public project repositories. The refresh preserves light/dark mode, uses a native cursor, and removes rotating role text and the global music widget from the page layout.
+AI and automation projects use responsive, code-rendered workflow overviews, explicitly labeled as overviews rather than live app screenshots. Original captures remain available on project pages at full size and maximum configured image quality. Website previews preserve their original aspect ratio.
+
+Shared route entrances, viewport reveals, hover feedback, and hero motion respect reduced-motion preferences. Work uses project filters; About has a profile, principles, skills, and timeline; Contact has email and copy actions. Light/dark mode persists without a server/client hydration mismatch. A native cursor replaces cursor interception.
 
 ## Hosting
 
 The GitHub production branch is master. The existing Vercel project mosesfawole serves the public URL. Another existing Vercel project, newportfolio, also builds this repository; keep the intended public domain in mind when inspecting deployments.
+
+## Font licensing
+
+Manrope and Playfair Display are bundled locally from the official google/fonts repository. Their SIL Open Font License files are included under app/fonts. Native system fonts supply body and UI text; no Apple font files are redistributed.

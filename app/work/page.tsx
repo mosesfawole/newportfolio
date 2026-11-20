@@ -1,32 +1,7 @@
 import WorkList from "@/components/work/WorkList";
 import Footer from "@/components/ui/Footer";
-
-export const metadata = {
-  title: "Work — Moses Fawole",
-};
-
+import PageIntro from "@/components/ui/PageIntro";
+export const metadata = { title: "Work — Moses Fawole" };
 export default function WorkPage() {
-  return (
-    <main id="main-content">
-      <section className="px-6 md:px-12 pt-36 pb-16">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-[14px] tracking-[0.3em] uppercase text-muted font-body mb-4">
-            Selected Work
-          </p>
-          <h1
-            className="font-display font-medium text-ink dark:text-cream leading-tight mb-4"
-            style={{
-              fontSize: "clamp(40px, 7vw, 88px)",
-              letterSpacing: "-0.02em",
-            }}
-          >
-            Projects &<br />
-            <em>Experience</em>
-          </h1>
-        </div>
-      </section>
-      <WorkList />
-      <Footer />
-    </main>
-  );
+ return <main id="main-content"><PageIntro label="The project shelf" title="Ideas, brought" accent="into the real world." description="AI workflows, web products, and a few experiments. Explore the problem, the implementation, and what each project can actually do."/><WorkList/><Footer/></main>;
 }

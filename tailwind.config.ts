@@ -19,8 +19,8 @@ const config: Config = {
         "border-dark": "#2a2a2a",
       },
       fontFamily: {
-        display: ["var(--font-playfair)", "serif"],
-        body: ["var(--font-inter)", "sans-serif"],
+        display: ["var(--font-heading)", "sans-serif"],
+        body: ["-apple-system", "BlinkMacSystemFont", "Segoe UI Variable", "Segoe UI", "sans-serif"],
       },
       animation: {
         "fade-up": "fadeUp 0.6s ease forwards",
