@@ -342,3 +342,45 @@ header nav > div > a.text-ink { background: var(--panel); }
 /* Website captures retain their full native proportions instead of a tall thumbnail slot. */
 .screenshot-preview, .detail-preview .screenshot-preview { aspect-ratio: auto; min-height: 0; padding: .8rem; }
 .screenshot-preview .preview-photo { display: block; position: relative; width: 100%; height: auto; min-height: 0; object-fit: contain; object-position: center; padding: 0; border-radius: .65rem; }
+
+/* Playful motion: quick feedback, springy accents, and a quiet ambient layer. */
+:root { --ease-play: cubic-bezier(.175,.885,.32,1.275); }
+.page-enter { animation: playful-page-in .45s cubic-bezier(.22,1,.36,1) both; }
+@keyframes playful-page-in { from { opacity: .25; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+.hero-title em { display: inline-block; position: relative; }
+.hero-title em::after { content: ''; display: block; position: absolute; bottom: -.07em; left: 0; width: 100%; height: .06em; border-radius: 50%; background: currentColor; opacity: .25; transform-origin: left; animation: ink-swoop .7s .5s var(--ease-play) both; }
+@keyframes ink-swoop { from { transform: scaleX(0) rotate(-3deg); } to { transform: scaleX(1) rotate(-1deg); } }
+.hero-intro .availability::before { animation: availability-breathe 4s ease-in-out 3; }
+@keyframes availability-breathe { 0%,100% { box-shadow: 0 0 0 0 #739f6320; } 50% { box-shadow: 0 0 0 6px #739f6300; } }
+.primary-link, .copy-button, .filter-tabs button { transition: transform .25s var(--ease-play), box-shadow .25s ease, background-color .2s ease; }
+.primary-link:active, .copy-button:active, .filter-tabs button:active { transform: scale(.95); }
+.secondary-link, .back-link, .project-detail-link { display: inline-block; transition: transform .25s var(--ease-play); }
+.secondary-link:hover, .project-detail-link:hover { transform: translateX(5px); }
+.back-link:hover { transform: translateX(-5px); }
+header nav > a { transition: transform .25s var(--ease-play); }
+header nav > a:hover { transform: rotate(-4deg) scale(1.03); }
+header nav > div > a { position: relative; }
+header nav > div > a::after { content: ''; position: absolute; left: 25%; right: 25%; bottom: -.25rem; height: 3px; border-radius: 5px; background: currentColor; transform: scaleX(0); transition: transform .25s var(--ease-play); }
+header nav > div > a:hover::after, header nav > div > a:focus-visible::after { transform: scaleX(1); }
+.project-grid > .reveal:nth-child(2n) { animation-delay: .06s; }
+.project-grid > .reveal:nth-child(3n) { animation-delay: .12s; }
+.preview-open { transition: transform .28s var(--ease-play), opacity .2s ease; }
+.project-visual-link:focus-visible .preview-open { opacity: 1; transform: translateY(0); }
+.project-tile h3 a { background-image: linear-gradient(currentColor,currentColor); background-position: 0 100%; background-size: 0 1px; background-repeat: no-repeat; transition: background-size .25s ease; }
+.project-tile h3 a:hover { background-size: 100% 1px; }
+.skill-card { transition: transform .28s var(--ease-play), box-shadow .28s ease; }
+.skill-card svg { transition: transform .28s var(--ease-play); }
+@media (hover:hover) and (pointer:fine) {
+ .project-visual-link .visual-preview { transition: transform .35s var(--ease-play); }
+ .project-visual-link:hover .visual-preview { transform: translateY(-3px) rotate(-.6deg) scale(.985); }
+ .project-visual-link:hover .preview-open { transform: translateY(-3px) rotate(3deg); }
+ .skill-card:hover { transform: translateY(-5px) rotate(-1deg); box-shadow: 0 12px 24px #173b2b0d; }
+ .skill-card:hover svg { transform: rotate(12deg) scale(1.12); }
+ .filter-tabs button:hover { transform: translateY(-2px); }
+}
+@media (prefers-reduced-motion:reduce) {
+ .page-enter, .hero-title em::after, .hero-intro .availability::before { animation: none; }
+ .primary-link, .copy-button, .filter-tabs button, .secondary-link, .back-link, .project-detail-link, header nav > a, header nav > div > a::after, .preview-open, .project-tile h3 a, .skill-card, .skill-card svg, .project-visual-link .visual-preview { transition: none; }
+ .primary-link:hover, .primary-link:active, .copy-button:active, .filter-tabs button:active, .filter-tabs button:hover, .secondary-link:hover, .back-link:hover, .project-detail-link:hover, header nav > a:hover, .project-visual-link:hover .visual-preview, .project-visual-link:hover .preview-open, .skill-card:hover, .skill-card:hover svg { transform: none; }
+}
+.hero-intro .availability::before { content: ''; display: inline-block; width: 7px; height: 7px; margin-right: .55rem; border-radius: 50%; background: currentColor; vertical-align: middle; }
